@@ -1,0 +1,18 @@
+package demoContructor;
+
+public class A {
+	int i;
+	public A() { i=100;}
+	
+	public void display() {	System.out.println(i);}
+	
+	public static void main(String[] args) {
+	  A a = new A();
+	  a.display();
+	  
+	  
+	  
+}
+	
+	
+}

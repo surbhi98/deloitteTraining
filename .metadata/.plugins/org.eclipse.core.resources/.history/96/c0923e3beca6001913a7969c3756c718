@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Customer {
+
+	public void customerDetails()
+	{	System.out.println("Customer details printed");
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	 Employee e= new Employee();
+	 e.employeeDetails();
+	 
+	 Customer c = new Customer();
+	 c.customerDetails();
+	 
+	 System.out.println("Enter 2 numbers:");
+	 Scanner s = new Scanner(System.in);
+	 int a = s.nextInt();
+	 Scanner sc = new Scanner(System.in);
+	 int b = sc.nextInt();
+	 System.out.println(a+b);
+
+	 
+	}
+
+}

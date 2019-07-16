@@ -1,0 +1,8 @@
+package org.animals;
+
+
+public class Lion {
+	String color ="orange";
+	
+
+}

@@ -1,0 +1,16 @@
+package zoo;
+import org.animals.*;
+
+public class VandalurZoo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Lion l = new Lion();
+		System.out.println(l.color);
+		
+		
+		
+	}
+
+}

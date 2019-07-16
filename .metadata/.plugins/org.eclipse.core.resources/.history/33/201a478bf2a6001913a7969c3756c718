@@ -1,0 +1,20 @@
+package sumofnumbers;
+
+import java.util.Scanner;
+
+public class NumberSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 System.out.println("Enter 2 numbers:");
+		 Scanner s = new Scanner(System.in);
+		 int a = s.nextInt();
+		// Scanner sc = new Scanner(System.in);
+		 int b = s.nextInt();
+		 System.out.println("Sum of 2 numbers: "+ (a+b));
+
+		 
+
+	}
+
+}

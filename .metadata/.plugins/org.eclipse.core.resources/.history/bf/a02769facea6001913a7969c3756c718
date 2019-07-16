@@ -1,0 +1,25 @@
+
+public class PrintMessage {
+
+	public void  hello()
+	{
+		System.out.println("Hello!!");
+	}
+	
+	public int welcome()
+	{	System.out.println("Welcome!!");
+		return 7;
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello and welcome to IDE");
+		PrintMessage p = new PrintMessage();
+		p.hello();
+		int i = p.welcome();
+		System.out.println(i);
+	
+	}
+
+}
