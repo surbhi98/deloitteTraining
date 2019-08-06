@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.delloite.cms.models.EmployeeDetails" table="hr.EmployeeTypes" >
+	
+		<id name="employeeId" type="int" column="EID">
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="employeeName" column="empName"/>
+		
+		<property name="employeeSalary" column ="empSalary" />
+	
+		<set name = "employeeAdres" cascade="save-update" table = "hr.EmpAddress">
+		<key column ="EID"></key>
+		<many-to-many column ="AID" class="com.delloite.cms.models.Address"></many-to-many>
+		
+		</set>
+	
+
+	</class>
+	
+	
+	
+	<class name="com.delloite.cms.models.Address" table="hr.Address" >
+	
+		<id name="aId" type="int" column="AID">
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="city" column="city"/>
+		
+		<property name="state"/>
+	
+		
+	
+
+	</class>
+</hibernate-mapping>

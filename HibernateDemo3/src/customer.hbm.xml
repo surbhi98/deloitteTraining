@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.delloite.cms.models.Customer" table="hr.CustomerTypes" discriminator-value="MainCustomer">
+	
+		<id name="customerId" type="int" column="CID">
+			<generator class="assigned"/>
+		</id>
+		<discriminator column = "CustTypes"></discriminator>
+		<property name="customerName" column="custName"/>
+		<property name="customerAddress" column="custAddress"/>
+		<property name="billAmount" />
+		
+		<subclass name ="com.delloite.cms.models.PremiumCustomer" extends = "Customer" discriminator-value="PremiumCust">
+		<property name = "rewardPoints"></property>
+		</subclass>
+		
+	
+
+	</class>
+</hibernate-mapping>
