@@ -28,7 +28,7 @@ public class ProductController {
 		
 	}
 	
-	@RequestMapping("/productForm")
+	
 	public String productForm(Model model)
 	{	model.addAttribute("product", new Product(1,"monitor", 32,3423));
 		return "productform";
@@ -90,16 +90,19 @@ public class ProductController {
 	public String updateProduct(@ModelAttribute("product") Product p)
 	{	System.out.println("#####product :"+p);
 		this.productService.updateProduct(p);
+		
 		return "redirect:/getProducts";
 	}
 	
 	
 	@RequestMapping("/saveProduct")
-	public String saveProduct()
+	public String saveProduct(Model model, Product product)
 	{	
-		Product product = new Product(11, "Bottle", 1000, 249);
+		//Product product = new Product(11, "Bottle", 1000, 249);
 		productService.addProduct(product);
-		return "saved product!";
+		model.addAttribute("product", new Product());
+		model.addAttribute("message", product.getProductName()+" product added");
+		return "redirect:/getProducts";
 		
 	}
 	

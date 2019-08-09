@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.ForeignKey;
+
 @Entity
 
 @Table(schema ="hr" , name = "hr.Product100")
@@ -17,6 +19,7 @@ public class Product {
 	private int quantity;
 	@Column
 	private int price;
+	
 	
 	
 	

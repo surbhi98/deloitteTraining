@@ -10,7 +10,7 @@
 </head>
 <body>
 <h2 align ="center">Product form</h2>
-<c:url var="addAction" value="/addProduct" ></c:url>
+<c:url var="addAction" value="/saveProduct" ></c:url>
 
 <form:form action = "${addAction}" modelAttribute="product">
 Product id: <form:input path = "productId" name = "productId"/><br>
@@ -30,6 +30,8 @@ Product Price: <form:input path = "price" name = "price"/><br>
 
 
 </form:form>
+
+<h2>${message }</h2>
 
 <h3>Persons List</h3> 
 <c:if test="${!empty listProducts}">
